@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    >
+
+    <Color x:Key="Primary" >#6489FE</Color>
+    <Color x:Key="Secondary" >#C8CEE2</Color>
+    <Color x:Key="InputTextFrame" >#003EFF</Color>
+    <Color x:Key="InputTextColor" >#FFFFFF</Color>
+    
+    <Style TargetType="Button" >
+        <Setter Property="CornerRadius" Value="30"></Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="btnIngresar" >
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" ></Setter>
+        <Setter Property="Text" Value="CANCELAR"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+    </Style>
+
+    <Style TargetType="Entry" x:Key="inputAccessEmail" >
+        <Setter Property="BackgroundColor" Value="{StaticResource InputTextFrame}" ></Setter>
+        <Setter Property="Placeholder" Value="Ingrese correo institucional"></Setter>
+        <Setter Property="PlaceholderColor" Value="{StaticResource InputTextColor}"></Setter>
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+    </Style>
+</ResourceDictionary>
