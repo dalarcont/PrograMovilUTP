@@ -3,25 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     >
 
-    <Color x:Key="Primary" >#6489FE</Color>
-    <Color x:Key="Secondary" >#C8CEE2</Color>
-    <Color x:Key="InputTextFrame" >#003EFF</Color>
-    <Color x:Key="InputTextColor" >#FFFFFF</Color>
+    <Color x:Key="Bannercolor" >#1C225F</Color>
+
+
+    <Style TargetType="Image" x:Key="homeBanner">
+        <Setter Property="BackgroundColor" Value="{StaticResource Bannercolor}"></Setter>
+        <Setter Property="WidthRequest" Value="5"></Setter>
+        <Setter Property="Source" Value="RankStudentLogo.png"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="appTitle">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="Title"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="appHomeDescription">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="End"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="appHomeDescriptionMoreInfolink">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Start"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="appHomeLoginText">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="Subtitle"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="End"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+    </Style>
     
-    <Style TargetType="Button" >
-        <Setter Property="CornerRadius" Value="30"></Setter>
-    </Style>
-
-    <Style TargetType="Button" x:Key="btnIngresar" >
-        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" ></Setter>
-        <Setter Property="Text" Value="CANCELAR"></Setter>
-        <Setter Property="TextColor" Value="White"></Setter>
-    </Style>
-
+    <!-- Form login -->
     <Style TargetType="Entry" x:Key="inputAccessEmail" >
-        <Setter Property="BackgroundColor" Value="{StaticResource InputTextFrame}" ></Setter>
         <Setter Property="Placeholder" Value="Ingrese correo institucional"></Setter>
-        <Setter Property="PlaceholderColor" Value="{StaticResource InputTextColor}"></Setter>
         <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
     </Style>
+
+    <Style TargetType="Entry" x:Key="inputAccessPkey" >
+        <Setter Property="Placeholder" Value="Contraseña"></Setter>
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="IsPassword" Value="True"></Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="btn" >
+        <Setter Property="Text" Value="INGRESAR"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor" Value="Blue"></Setter>
+        <Setter Property="Margin" Value="30,0,30,0"></Setter>
+    </Style>
+    <Style TargetType="Button" x:Key="btn2" >
+        <Setter Property="Text" Value="REGISTRO"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor" Value="#1C225F"></Setter>
+        <Setter Property="Margin" Value="30,0,30,0"></Setter>
+    </Style>
+    
+    <!-- Signup form -->
+    <Style TargetType="Label" x:Key="SU_title">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="Title"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+        <Setter Property="Text" Value="REGISTRARSE"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="SU_Description">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Start"></Setter>
+        <Setter Property="Text" Value="Para formar parte de RankStudent es necesario que poseas una cuenta educativa."></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="SU_RequiredFieldsText">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Start"></Setter>
+    </Style>
+    <Style TargetType="Entry" x:Key="SU_Entry">
+        <Setter Property="Placeholder" Value="Escribe aquí"></Setter>
+    </Style>
+    <Style TargetType="Button" x:Key="btn3" >
+        <Setter Property="Text" Value="EJECUTAR REGISTRO"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor" Value="#1C225F"></Setter>
+        <Setter Property="Margin" Value="30,10,30,20"></Setter>
+    </Style>
+
+    
 </ResourceDictionary>

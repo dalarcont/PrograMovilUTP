@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DA_Unidad2.MainPage">
 
-    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+    <Grid x:Name="ContentPanel" Grid.Row="1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -23,23 +23,23 @@
         </Grid.RowDefinitions>
         
         <!--#region Bienvenida-->
-        <Image Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3"  Source="RankStudentLogo.png"></Image>
-        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalTextAlignment="Center" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center">
+        <Image Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource homeBanner}"></Image>
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Style="{StaticResource appTitle}">
             <Label.Text>
                 CENTRAL DE CALIFICACIÓN COMUNITARIA ESTUDIANTIL
             </Label.Text>
         </Label>
-        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" HorizontalTextAlignment="Center" FontSize="14" VerticalTextAlignment="Start">
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2" Style="{StaticResource appHomeDescription}">
             <Label.Text>
                 Utiliza tu juicio académico y social.
                 Obtén una opinión de tus nuevos compañeros en cada semestre académico que estés cursando. Así te será fácil saber con quién contar y con quién no. De igual forma descubre cuál es la opinión de tus compañeros sobre ti.
             </Label.Text>
         </Label>
-        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" HorizontalTextAlignment="Center" FontSize="14" VerticalTextAlignment="Start">
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Style="{StaticResource appHomeDescriptionMoreInfolink}">
             <Label.Text>Para mayor información visita la web http://rankstudent.com
             </Label.Text>
         </Label>
-        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" HorizontalTextAlignment="Center" FontSize="Title" FontAttributes="Bold" VerticalTextAlignment="End">
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Style="{StaticResource appHomeLoginText}">
             <Label.Text>INGRESO
             </Label.Text>
         </Label>
@@ -47,11 +47,12 @@
         
         <!--#region Login form-->
         <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" Style="{StaticResource inputAccessEmail}" x:Name="RS_Login_User"></Entry>
-        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" IsPassword="True" Placeholder="Contraseña" HorizontalTextAlignment="Center" x:Name="RS_Login_Pkey"></Entry>
-        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Text="INGRESAR" Clicked="btnStartLogin"></Button>
-        
-        
+        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" Style="{StaticResource inputAccessPkey}" x:Name="RS_Login_Pkey"></Entry>
+        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource btn}" Text="INGRESAR" Clicked="btnStartLogin"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8" Style="{StaticResource btn2}" Text="REGISTRARME"  Clicked="btnStartSignup" ></Button>
         <!--#endregion Login form-->
+
+        <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="9" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontAttributes="Italic">Versión 1</Label>
         
         
         

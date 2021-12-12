@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:DA_Unidad2.ViewModel" x:DataType="viewmodel:UserViewModel"
+             x:Class="DA_Unidad2.View.NewUser">
+    <ContentPage.Content>
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8" Text="ROW"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="9" Text="ROW"></Label> -->
+
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource SU_title}"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource SU_Description}"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Style="{StaticResource SU_RequiredFieldsText}">Indicanos tu correo institucional</Label>
+            <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Style="{StaticResource SU_Entry}" Margin="30,0,30,0" Text="{Binding Email}"></Entry>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" Style="{StaticResource SU_RequiredFieldsText}">Escribe una contraseña</Label>
+            <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" Style="{StaticResource SU_Entry}" Margin="30,0,30,0" IsPassword="true" Text="{Binding Pkey}"></Entry>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Style="{StaticResource SU_RequiredFieldsText}">Indicanos tu nombre completo</Label>
+            <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Style="{StaticResource SU_Entry}" Margin="30,0,30,0" Text="{Binding Name}"></Entry>
+            <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource btn3}" Command="{Binding SignupCMD}"></Button>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
