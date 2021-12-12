@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:DA_Unidad2.ViewModel" x:DataType="viewmodel:LoginViewModel"
              x:Class="DA_Unidad2.MainPage">
 
     <Grid x:Name="ContentPanel" Grid.Row="1">
@@ -46,9 +46,9 @@
         <!--#endregion Bienvenida-->
         
         <!--#region Login form-->
-        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" Style="{StaticResource inputAccessEmail}" x:Name="RS_Login_User"></Entry>
-        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" Style="{StaticResource inputAccessPkey}" x:Name="RS_Login_Pkey"></Entry>
-        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource btn}" Text="INGRESAR" Clicked="btnStartLogin"></Button>
+        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" Style="{StaticResource inputAccessEmail}" Text="{Binding emailTxt}"></Entry>
+        <Entry Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" Style="{StaticResource inputAccessPkey}" Text="{Binding passwordTxt}"></Entry>
+        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource btn}" Text="INGRESAR" Command="{Binding LoginCMD}"></Button>
         <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8" Style="{StaticResource btn2}" Text="REGISTRARME"  Clicked="btnStartSignup" ></Button>
         <!--#endregion Login form-->
 

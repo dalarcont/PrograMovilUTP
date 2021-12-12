@@ -88,6 +88,56 @@
         <Setter Property="BackgroundColor" Value="#1C225F"></Setter>
         <Setter Property="Margin" Value="30,10,30,20"></Setter>
     </Style>
+    
+    <!-- User tab 1 content -->
+    <Style TargetType="Label" x:Key="contentT1_name">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="contentT1_center">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="End"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="FontAttributes" Value="Italic"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="contentT1_text">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="End"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="contentT1_pointTitle">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="contentT1_point">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="112"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="contentT1_point_lt">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="38"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+    </Style>
+    <Style TargetType="Label" x:Key="scoreDetailed">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalTextAlignment" Value="End"></Setter>
+        <Setter Property="TextColor" Value="#000000"></Setter>
+        <Setter Property="Text" Value="El puntaje se divide en 4 rangos: de 0 a 250 no eres muy buen compañero; de 251 a 500 no eres mal compañero pero tampoco el mejor; de 501 a 750 eres buen compañero pero te falta mejorar; de 751 a 1000 eres muy buen compañero"></Setter>
+    </Style>
 
     
 </ResourceDictionary>

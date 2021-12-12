@@ -34,7 +34,7 @@ namespace DA_Unidad2.ViewModel
             char delim2 = '.';
             string[] vals1 = Email.Split(delim);
             string[] vals2 = vals1[1].Split(delim2);
-            this.CenterId = vals2[0];
+            this.CenterId = vals2[0].ToUpper();
             switch (vals2[0])
             {
                 case "utp":
@@ -50,6 +50,16 @@ namespace DA_Unidad2.ViewModel
                     break;
             }
         }
+
+        // Instantiate random number generator.  
+        private readonly Random _random = new Random();
+
+        // Generates a random number within a range.      
+        public int RandomNumber(int min, int max)
+        {
+            return _random.Next(min, max);
+        }
+
         #endregion
 
         #region CMDS
@@ -72,7 +82,13 @@ namespace DA_Unidad2.ViewModel
             newUser.rs_name = Name;
             //for akacenter name and id use the following method
             akaCenter();
+            newUser.rs_akaCenterId = CenterId;
+            newUser.rs_akaCenterName = Center;
             await App.Db.SaveUserModelAsync(newUser);
+            ScoreRecords UserScoreDefault = new ScoreRecords();
+            UserScoreDefault.rs_score = RandomNumber(0,1000);
+            UserScoreDefault.rs_akaEmail = Email;
+            await App.Db.SaveScoreAsync(UserScoreDefault);
             await Application.Current.MainPage.DisplayAlert("RankStudent - Registro","Bienvenido: \n" + Name + "\nRegistro exitoso en RankStudent para la institución:\n" + Center + "", "OK");
             await Application.Current.MainPage.Navigation.PopAsync();
 

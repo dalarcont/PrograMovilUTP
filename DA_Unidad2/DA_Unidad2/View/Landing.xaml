@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:DA_Unidad2.ViewModel" x:DataType="viewmodel:UserLogedViewModel"
+            x:Class="DA_Unidad2.View.Landing"
+            BarBackgroundColor="LightSteelBlue" BarTextColor="White"
+            NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Image
+               Source="RankStudentLogo2.png"
+               Aspect="AspectFill" 
+                WidthRequest="64"
+                HeightRequest="64"/>
+            <Label
+               Text="RankStudent"
+               FontSize="18"
+               TextColor="White"
+               VerticalTextAlignment="Center" 
+                FontAttributes="Bold"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="{Binding Name}">
+        <Grid x:Name="ContentPanel1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Column="0" Grid.Row="0" Source="drawable-hdpi/ic_account_box.png"></Image>
+            <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Text="Bienvenido(a) a RankStudent" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"></Label>
+            <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Text="{Binding Name}" Style="{StaticResource contentT1_name}"></Label>
+            <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Text="{Binding Center}" Style="{StaticResource contentT1_center}"></Label>
+            <!-- -->
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource contentT1_text}" Text="En esta sección verás tus estadísticas respecto a lo que piensan otros estudiantes de ti."></Label>
+            <!-- -->
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Style="{StaticResource contentT1_pointTitle}" Text="TU PUNTAJE EN RANKSTUDENT (0 a 1000)"></Label>
+            <Image Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Source="drawable-hdpi/ic_data_usage.png"></Image>
+            <!-- -->
+            <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="2" Text="{Binding ScoreActual}" Style="{StaticResource contentT1_point}" TextColor="{Binding Scorecolor}"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Text="Calificación tras culminar el periodo: " HorizontalTextAlignment="Start"></Label>
+            <Label Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="5" Text="{Binding Semestre}"  HorizontalTextAlignment="Center"></Label>
+            <!-- -->
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" Grid.RowSpan="2" Style="{StaticResource scoreDetailed}"></Label>
+            <!-- -->
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7" Text="Esta puntuación está basada en una operación estadística que recolecta el valor de la calificación que te dan tus compañeros al final de cada semestre." HorizontalTextAlignment="Center"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8" Text="No se trata de un error. Tú inicias en 1000 bajo el concepto de inocencia. Se degrada según las opiniones. Para que por favor te ahorres reportes al desarrollador sobre fallos de la App." HorizontalTextAlignment="Center"></Label>
+            <!-- -->
+            <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="9" Text="Salir" Margin="30,10,30,10" Clicked="btnExit"></Button>
+
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="{Binding CenterId}">
+        <Grid x:Name="ContentPanel2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource contentT1_pointTitle}" Text="{Binding Center}"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource contentT1_pointTitle}" Text="A continuación se muestran quienes encabezan la mejor calificación de tu institución" VerticalTextAlignment="Start"></Label>
+
+            <Image Grid.Column="0" Grid.Row="2" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="2" Text="Aitor Tilla" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="2" Text="aitor@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="2" Text="950" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#1CEB00"></Label>
+
+            <Image Grid.Column="0" Grid.Row="3" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="3" Text="Alba Sura" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="3" Text="albasura@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="3" Text="640" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#00EBEB"></Label>
+
+            <Image Grid.Column="0" Grid.Row="4" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="4" Text="Andrés Trozado" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="4" Text="andrestrozado@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="4" Text="575" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#00EBEB"></Label>
+
+            <Image Grid.Column="0" Grid.Row="5" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="5" Text="Elton tito" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="5" Text="eltontito@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="5" Text="468" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#00EBEB"></Label>
+
+            <Image Grid.Column="0" Grid.Row="6" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="6" Text="Helen Chufe" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="6" Text="helenchufe@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="6" Text="401" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#FF8C02"></Label>
+
+            <Image Grid.Column="0" Grid.Row="7" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="7" Text="Inés Tornudo" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="7" Text="inestornudo@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="7" Text="356" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#FF8C02"></Label>
+
+            <Image Grid.Column="0" Grid.Row="8" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="8" Text="Lola Mento" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="8" Text="lolamento@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="8" Text="295" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#FF8C02"></Label>
+
+            <Image Grid.Column="0" Grid.Row="9" Source="drawable-hdpi/ic_account_box.png" HorizontalOptions="Center"></Image>
+            <Label Grid.Column="1" Grid.Row="9" Text="Matías Queroso" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+            <Label Grid.Column="1" Grid.Row="9" Text="matíasqueroso@utp.edu.co" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="9" Text="101" HorizontalTextAlignment="Center" Style="{StaticResource contentT1_point_lt}" TextColor="#FF0000"></Label>
+
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="CALIFICAR" >
+        <Grid x:Name="ContentPanel4" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Style="{StaticResource contentT1_text}" Text="CALIFICAR UN COMPAÑERO"></Label>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource contentT1_text}" Text="INGRESA EL CORREO INSTITUCIONAL DE TU COMPAÑERO"></Label>
+            
+            <Entry Placeholder="Correo de tu compañero" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalTextAlignment="Center" Margin="30,10,30,10"></Entry>
+            <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" Text="Selecciona si fue buen compañero o no" Style="{StaticResource contentT1_text}"></Label>
+            <Button Grid.Column="0" Grid.Row="4" Text="SÍ" Margin="30,10,30,10" Clicked="btnYes"></Button>
+            <Button Grid.Column="2" Grid.Row="4" Text="NO" Margin="30,10,30,10" Clicked="btnNo"></Button>
+            <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="6" Text="CALIFICAR" Margin="30,10,30,10" Clicked="btnCalificar"></Button>
+
+        </Grid>
+    </ContentPage>
+    
+</TabbedPage>

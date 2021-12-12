@@ -1,4 +1,5 @@
 ﻿using DA_Unidad2.Model;
+using DA_Unidad2.View;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
@@ -60,9 +61,13 @@ namespace DA_Unidad2.ViewModel
 
             if(ListaUsuarios.Count > 0)
             {
-                await Application.Current.MainPage.DisplayAlert("Bienvenido", "Bienvenido " + User.rs_name + "", "OK");
+                await Application.Current.MainPage.DisplayAlert("RankStudent", "Bienvenido " + User.rs_name + "", "OK");
                 //Show new page content
-                //await Application.Current.MainPage.PushAsync(new Landing());
+                await Application.Current.MainPage.Navigation.PushAsync(new Landing(User.rs_akaEmail, User.rs_pkey));
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("RankStudent", "No se puede completar el acceso.\nPosiblmente usuario no existe o base de datos no está disponible", "OK");
             }
         }
         #endregion
